@@ -5,11 +5,18 @@
       <div class="col-sm-12">
         <button class="btn btn-sm btn-primary" (click)="showInterpolationFun()">Interpolation</button>
       </div>
+      <div class="col-sm-12">
+        <br>
+        <button class="btn btn-sm btn-primary" (click)="showPropertyBindingFun()">Property Binding</button>
+      </div>
     </div>    
   </div>
   <div class="col-sm-10">
     <div *ngIf="showInterpolation">
       <app-interpolation></app-interpolation>
+    </div>
+    <div *ngIf="showPropertyBinding">
+      <app-property-binding></app-property-binding>
     </div>
   </div>
 </div>

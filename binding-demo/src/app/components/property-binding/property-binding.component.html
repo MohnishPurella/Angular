@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-3">
+        <input [id]="myId" bind-disabled="isDisabled"  type="text" value="PropertyBinding" class="form-control">
+    </div>
+</div>
+<div class="row">    
+    <div class="col-sm-3">
+        <br>
+        <input id="{{myId}}" [disabled]="!isDisabled"  type="text" value="PropertyBinding" class="form-control">
+    </div>
+</div>
