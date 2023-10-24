@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'binding-demo';
+export class AppComponent {  
+  showInterpolation:boolean = false;
+
+  showInterpolationFun(){
+    this.showInterpolation = true;
+  }
 }
