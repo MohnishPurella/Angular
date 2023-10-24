@@ -1,0 +1,11 @@
+<div class="container-fluid row">
+  <div class="col-sm-12"><br></div>
+  <div class="col-sm-2">
+    <button class="btn-sm btn-secondary" (click)="showInterpolationFun()">Interpolation</button>    
+  </div>
+  <div class="col-sm-10">
+    <div *ngIf="showInterpolation">
+      <app-interpolation></app-interpolation>
+    </div>
+  </div>
+</div>
