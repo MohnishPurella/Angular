@@ -8,8 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'binding';
   showInterpolation:boolean = false;
+  showPropertyBinding:boolean = false;
 
   showInterpolationFun(){
     this.showInterpolation = true;
+    this.showPropertyBinding = false;
+  }
+
+  showPropertyBindingFun(){
+    this.showInterpolation = false;
+    this.showPropertyBinding = true;
   }
 }
