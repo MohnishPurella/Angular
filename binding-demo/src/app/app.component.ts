@@ -10,12 +10,14 @@ export class AppComponent {
   showPropertyBinding: boolean = false;
   showClassBinding:boolean = false;
   showStyleBinding:boolean = false;
+  showEventBinding:boolean = false;
 
   showInterpolationFun(){
     this.showInterpolation = true;
     this.showPropertyBinding = false;
     this.showClassBinding = false;
     this.showStyleBinding = false;
+    this.showEventBinding = false;
   }
 
   showPropertyBindingFun(){
@@ -23,6 +25,7 @@ export class AppComponent {
     this.showInterpolation = false;
     this.showClassBinding = false;
     this.showStyleBinding = false;
+    this.showEventBinding = false;
   }
 
   showClassBindingFun(){
@@ -30,10 +33,20 @@ export class AppComponent {
     this.showInterpolation = false;
     this.showPropertyBinding = false;
     this.showStyleBinding = false;
+    this.showEventBinding = false;
   }
 
   showStyleBindingFun(){
     this.showStyleBinding = true;
+    this.showClassBinding = false;
+    this.showInterpolation = false;
+    this.showPropertyBinding = false;
+    this.showEventBinding = false;
+  }
+
+  showEventBindingFun(){
+    this.showEventBinding = true;
+    this.showStyleBinding = false;
     this.showClassBinding = false;
     this.showInterpolation = false;
     this.showPropertyBinding = false;

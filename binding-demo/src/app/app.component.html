@@ -16,7 +16,11 @@
       <div class="col-sm-12">
         <br>
         <button class="btn btn-sm btn-primary" (click)="showStyleBindingFun()">Style Binding</button>
-      </div>           
+      </div>
+      <div class="col-sm-12">
+        <br>
+        <button class="btn btn-sm btn-primary" (click)="showEventBindingFun()">Event Binding</button>
+      </div>      
     </div>    
   </div>
   <div class="col-sm-10">
@@ -31,6 +35,9 @@
     </div>     
     <div *ngIf="showStyleBinding">
       <app-style-binding></app-style-binding>
+    </div>
+    <div *ngIf="showEventBinding">
+      <app-event-binding></app-event-binding>
     </div>
   </div>
 </div>
