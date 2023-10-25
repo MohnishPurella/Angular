@@ -11,6 +11,7 @@ export class AppComponent {
   showClassBinding:boolean = false;
   showStyleBinding:boolean = false;
   showEventBinding:boolean = false;
+  showTemplateReference:boolean = false;
 
   showInterpolationFun(){
     this.showInterpolation = true;
@@ -18,6 +19,7 @@ export class AppComponent {
     this.showClassBinding = false;
     this.showStyleBinding = false;
     this.showEventBinding = false;
+    this.showTemplateReference = false;
   }
 
   showPropertyBindingFun(){
@@ -26,6 +28,7 @@ export class AppComponent {
     this.showClassBinding = false;
     this.showStyleBinding = false;
     this.showEventBinding = false;
+    this.showTemplateReference = false;
   }
 
   showClassBindingFun(){
@@ -34,6 +37,7 @@ export class AppComponent {
     this.showPropertyBinding = false;
     this.showStyleBinding = false;
     this.showEventBinding = false;
+    this.showTemplateReference = false;
   }
 
   showStyleBindingFun(){
@@ -42,10 +46,21 @@ export class AppComponent {
     this.showInterpolation = false;
     this.showPropertyBinding = false;
     this.showEventBinding = false;
+    this.showTemplateReference = false;
   }
 
   showEventBindingFun(){
     this.showEventBinding = true;
+    this.showStyleBinding = false;
+    this.showClassBinding = false;
+    this.showInterpolation = false;
+    this.showPropertyBinding = false;
+    this.showTemplateReference = false;
+  }
+
+  showTemplateReferenceVariableFun(){
+    this.showTemplateReference = true;
+    this.showEventBinding = false;
     this.showStyleBinding = false;
     this.showClassBinding = false;
     this.showInterpolation = false;
