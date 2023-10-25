@@ -24,6 +24,10 @@
       <div class="col-sm-12">
         <br>
         <button class="btn btn-sm btn-primary" (click)="showTemplateReferenceVariableFun()">Template Reference Variable</button>
+      </div>
+      <div class="col-sm-12">
+        <br>
+        <button class="btn btn-sm btn-primary" (click)="ShowTwoWayBindingFun()">Two Way Binding</button>
       </div>      
     </div>    
   </div>
@@ -45,6 +49,9 @@
     </div>
     <div *ngIf="showTemplateReference">
       <app-template-reference-variable></app-template-reference-variable>
+    </div>
+    <div *ngIf="showTwoWayBinding">
+      <app-two-way-binding></app-two-way-binding>
     </div>    
   </div>
 </div>
