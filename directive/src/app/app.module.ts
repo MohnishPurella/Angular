@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DirectiveHomeComponent } from './components/directive-home/directive-home.component';
+import { NgifComponent } from './components/directive-home/ngif/ngif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DirectiveHomeComponent
+    DirectiveHomeComponent,
+    NgifComponent
   ],
   imports: [
     BrowserModule

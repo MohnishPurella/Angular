@@ -12,4 +12,9 @@ export class DirectiveHomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showNgIf = false;
+
+  showNgIfFun(){
+    this.showNgIf = true;
+  }
 }

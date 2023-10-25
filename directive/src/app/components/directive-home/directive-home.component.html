@@ -1,1 +1,11 @@
-<p>directive-home works!</p>
+<div class="row">
+    <div class="col-sm-12"><br></div>
+    <div class="col-sm-3">
+        <button class="btn btn-primary" (click)="showNgIfFun()">*ngIf</button>
+    </div>
+    <div class="col-sm-9">
+        <div *ngIf="showNgIf">
+            <app-ngif></app-ngif>
+        </div>
+    </div>
+</div>
