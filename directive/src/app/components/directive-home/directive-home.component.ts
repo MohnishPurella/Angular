@@ -13,8 +13,15 @@ export class DirectiveHomeComponent implements OnInit {
   }
 
   showNgIf = false;
+  showNgFor = false;
 
   showNgIfFun(){
     this.showNgIf = true;
+    this.showNgFor = false;
+  }
+
+  showNgForFun(){
+    this.showNgIf = false;
+    this.showNgFor = true;
   }
 }
