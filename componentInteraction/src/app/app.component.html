@@ -1,0 +1,30 @@
+<div class="container-fluid row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+  <div class="col-sm-3">
+    <button class="btn btn-primary" (click)="showInputFun()">
+      Input
+    </button><br><br>
+    <button class="btn btn-primary" (click)="showViewChildFun()">
+      View Child
+    </button><br><br>
+    <button class="btn btn-primary" (click)="showOutputndEventEmitterFun()">
+      Output() and EventEmitter
+    </button><br><br>
+    <button class="btn btn-primary" (click)="showServiceFun()">
+      Service
+    </button>
+  </div>
+  <div class="col-sm-9">
+    <div *ngIf="showInputData">
+      <app-parent></app-parent>
+    </div>
+    <div *ngIf="showViewChildData">
+      <app-parent1></app-parent1>
+    </div>
+    <div *ngIf="showOutputndEventEmitterData">
+      <app-parent2></app-parent2>
+    </div>
+  </div>
+</div>
