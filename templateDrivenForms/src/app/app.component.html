@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <h4>Employee Enrollment Form</h4>
+    <form>
+        <div class="row">
+            <div class="col-sm-4 form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-sm-4 form-group">
+                <label>Middle Name</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-sm-4 form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12"><br></div>
+        </div>
+        <div class="row">            
+            <div class="col-sm-4">
+                <label>Select Gender</label>
+                <div class="form-group">
+                    <input type="radio" name="gender" value="male">
+                    <label class="form-check-label">&nbsp;Male&nbsp;</label>
+                    <input type="radio" name="gender" value="female">
+                    <label class="form-check-label">&nbsp;Female</label>
+                </div>               
+            </div>
+            <div class="col-sm-4 form-group">
+                <label>Date of Birth</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="col-sm-4 form-group">
+                <label>Mobile Number</label>
+                <input type="number" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12"><br></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 form-group">
+                <label>Role</label>
+                <select class="form-control">
+                    <option *ngFor="let role of roles" value="role.value">
+                        {{role.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <label>Time Preference</label>
+                <div class="form-group">
+                    <input type="radio" name="timePreference" value="morning">
+                    <label class="form-check-label">&nbsp; Morning (9AM-6PM) &nbsp;</label>
+                    <input type="radio" name="timePreference" value="night">
+                    <label class="form-check-label">&nbsp; Night (5PM-2AM)</label>
+                </div>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12"><br></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="btn btn-sm btn-success float-end">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<router-outlet></router-outlet>
