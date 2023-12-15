@@ -1,0 +1,8 @@
+<h2>Students Names</h2>
+<ul>
+    <li *ngFor="let student of studentsData">{{student.name}}</li>
+</ul>
+
+<div *ngIf="errorMsg">
+    {{errorMsg}}
+</div>
