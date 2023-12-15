@@ -1,18 +1,21 @@
 <div class="container-fluid">
     <h4>Employee Enrollment Form</h4>
-    <form>
+    <form #employeeForm="ngForm">
+
+        {{ employeeForm.value | json}}
+
         <div class="row">
             <div class="col-sm-4 form-group">
                 <label>First Name</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name='fname' ngModel>
             </div>
             <div class="col-sm-4 form-group">
                 <label>Middle Name</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name='mname' ngModel>
             </div>
             <div class="col-sm-4 form-group">
                 <label>Last Name</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name='lname' ngModel>
             </div>
         </div>
         <div class="row">
@@ -22,19 +25,40 @@
             <div class="col-sm-4">
                 <label>Select Gender</label>
                 <div class="form-group">
-                    <input type="radio" name="gender" value="male">
+                    <input type="radio" name="gender" value="male" ngModel>
                     <label class="form-check-label">&nbsp;Male&nbsp;</label>
-                    <input type="radio" name="gender" value="female">
+                    <input type="radio" name="gender" value="female" ngModel>
                     <label class="form-check-label">&nbsp;Female</label>
                 </div>               
             </div>
             <div class="col-sm-4 form-group">
                 <label>Date of Birth</label>
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" name='dob' ngModel>
             </div>
             <div class="col-sm-4 form-group">
                 <label>Mobile Number</label>
-                <input type="number" class="form-control">
+                <input type="number" class="form-control" name='mobileNumber' ngModel>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12"><br></div>
+        </div>
+        <div class="row" ngModelGroup="address">
+            <div class="col-sm-3 form-group">
+                <label>Street</label>
+                <input type="text" class="form-control" name="street" ngModel>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>City</label>
+                <input type="text" class="form-control" name="city" ngModel>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>State</label>
+                <input type="text" class="form-control" name="state" ngModel>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>Postal Code</label>
+                <input type="text" class="form-control" name="postalCode" ngModel>
             </div>
         </div>
         <div class="row">
@@ -43,7 +67,7 @@
         <div class="row">
             <div class="col-sm-4 form-group">
                 <label>Role</label>
-                <select class="form-control">
+                <select class="form-control" name="role" ngModel>
                     <option *ngFor="let role of roles" value="role.value">
                         {{role.name}}
                     </option>
@@ -52,9 +76,9 @@
             <div class="col-sm-4">
                 <label>Time Preference</label>
                 <div class="form-group">
-                    <input type="radio" name="timePreference" value="morning">
+                    <input type="radio" name="timePreference" value="morning" ngModel>
                     <label class="form-check-label">&nbsp; Morning (9AM-6PM) &nbsp;</label>
-                    <input type="radio" name="timePreference" value="night">
+                    <input type="radio" name="timePreference" value="night" ngModel>
                     <label class="form-check-label">&nbsp; Night (5PM-2AM)</label>
                 </div>  
             </div>
