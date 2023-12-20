@@ -4,18 +4,22 @@
 
         {{ employeeForm.value | json}}
 
+        <hr>
+
+        {{employeeData | json}}
+
         <div class="row">
             <div class="col-sm-4 form-group">
                 <label>First Name</label>
-                <input type="text" class="form-control" name='fname' ngModel>
+                <input type="text" class="form-control" name='fname' [(ngModel)]="employeeData.fname">
             </div>
             <div class="col-sm-4 form-group">
                 <label>Middle Name</label>
-                <input type="text" class="form-control" name='mname' ngModel>
+                <input type="text" class="form-control" name='mname' [(ngModel)]="employeeData.mname">
             </div>
             <div class="col-sm-4 form-group">
                 <label>Last Name</label>
-                <input type="text" class="form-control" name='lname' ngModel>
+                <input type="text" class="form-control" name='lname' [(ngModel)]="employeeData.lname">
             </div>
         </div>
         <div class="row">
@@ -25,49 +29,49 @@
             <div class="col-sm-4">
                 <label>Select Gender</label>
                 <div class="form-group">
-                    <input type="radio" name="gender" value="male" ngModel>
+                    <input type="radio" name="gender" value="male" [(ngModel)]="employeeData.gender">
                     <label class="form-check-label">&nbsp;Male&nbsp;</label>
-                    <input type="radio" name="gender" value="female" ngModel>
+                    <input type="radio" name="gender" value="female" [(ngModel)]="employeeData.gender">
                     <label class="form-check-label">&nbsp;Female</label>
                 </div>               
             </div>
             <div class="col-sm-4 form-group">
                 <label>Date of Birth</label>
-                <input type="date" class="form-control" name='dob' ngModel>
+                <input type="date" class="form-control" name='dob' [(ngModel)]="employeeData.gender">
             </div>
             <div class="col-sm-4 form-group">
                 <label>Mobile Number</label>
-                <input type="number" class="form-control" name='mobileNumber' ngModel>
+                <input type="number" class="form-control" name='mobileNumber' [(ngModel)]="employeeData.gender">
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12"><br></div>
         </div>
-        <div class="row" ngModelGroup="address">
+        <!-- <div class="row" [(ngModel)]="employeeData"Group="address">
             <div class="col-sm-3 form-group">
                 <label>Street</label>
-                <input type="text" class="form-control" name="street" ngModel>
+                <input type="text" class="form-control" name="street" [(ngModel)]="employeeData.address.street">
             </div>
             <div class="col-sm-3 form-group">
                 <label>City</label>
-                <input type="text" class="form-control" name="city" ngModel>
+                <input type="text" class="form-control" name="city" [(ngModel)]="employeeData.address.city">
             </div>
             <div class="col-sm-3 form-group">
                 <label>State</label>
-                <input type="text" class="form-control" name="state" ngModel>
+                <input type="text" class="form-control" name="state" [(ngModel)]="employeeData.address.state">
             </div>
             <div class="col-sm-3 form-group">
                 <label>Postal Code</label>
-                <input type="text" class="form-control" name="postalCode" ngModel>
+                <input type="text" class="form-control" name="postalCode" [(ngModel)]="employeeData.address.postalCode">
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-sm-12"><br></div>
         </div>
         <div class="row">
             <div class="col-sm-4 form-group">
                 <label>Role</label>
-                <select class="form-control" name="role" ngModel>
+                <select class="form-control" name="role" [(ngModel)]="employeeData.role">
                     <option *ngFor="let role of roles" value="role.value">
                         {{role.name}}
                     </option>
@@ -76,9 +80,9 @@
             <div class="col-sm-4">
                 <label>Time Preference</label>
                 <div class="form-group">
-                    <input type="radio" name="timePreference" value="morning" ngModel>
+                    <input type="radio" name="timePreference" value="morning" [(ngModel)]="employeeData.timePreference">
                     <label class="form-check-label">&nbsp; Morning (9AM-6PM) &nbsp;</label>
-                    <input type="radio" name="timePreference" value="night" ngModel>
+                    <input type="radio" name="timePreference" value="night" [(ngModel)]="employeeData.timePreference">
                     <label class="form-check-label">&nbsp; Night (5PM-2AM)</label>
                 </div>  
             </div>
