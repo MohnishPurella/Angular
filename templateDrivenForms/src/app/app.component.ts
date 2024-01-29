@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddressModel, EmployeeModel } from './employeeModel';
+import { EmployeeModel } from './employeeModel';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +18,9 @@ export class AppComponent implements OnInit{
   employeeData:EmployeeModel = new EmployeeModel();
   ngOnInit(): void {    
     this.employeeData = this.getEmployeeData();
+    if(this.employeeData.role){
+      this.roleHasError = false;
+    }
   }
 
   getEmployeeData(): EmployeeModel {
@@ -28,18 +31,22 @@ export class AppComponent implements OnInit{
       gender: "male",
       dob: "15-05-1997",
       mobileNumber: 7075012545,
-      address: this.getAddress(),
       role: "development",
       timePreference: "morning"
     }
   }
 
-  getAddress():AddressModel{
-    return{
-      street: "Ramalayam opposite street",
-      city: "Pedatadepalli",
-      state: "Andhra Pradesh",
-      postalCode: 534101
+  roleHasError = true;
+
+  validateRole(value:any){
+    if(value == ''){
+      this.roleHasError = true;
+    }else{
+      this.roleHasError = false;
     }
+  }
+
+  onSubmit(){
+    
   }
 }
